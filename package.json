@@ -2,8 +2,14 @@
   "name": "html-builder",
   "version": "1.0.0",
   "description": "html-builder task for RSSchool",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "1": "node 01-read-file",
+    "2": "node 02-write-file",
+    "3": "node 03-files-in-folder",
+    "4": "node 04-copy-directory",
+    "5": "node 05-merge-styles",
+    "6": "node 06-build-page"
   },
   "author": "evgeniimal",
   "license": "ISC",
@@ -12,7 +18,7 @@
   },
   "homepage": "https://github.com/EvgeniiMal/html-builder-black#readme",
   "devDependencies": {
-    "@types/node": "^16.11.4",
-    "eslint": "^7.32.0"
+    "@types/node": "^18.11.9",
+    "eslint": "^8.26.0"
   }
 }
