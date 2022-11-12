@@ -52,12 +52,12 @@ const buildHTML = async (__dirname, toDirname, fromFilename, toFilename, compone
     if (componentsTagIndex !== -1) {
       const file = join(componentsDir, componentsArr[componentsTagIndex]);
       const fileHtml = await readFile(file, 'utf8');
-      html = html.replace(curlyTags[i], fileHtml);
+      html = html.replace(new RegExp(curlyTags[i], 'g'), fileHtml);
     } else {
       // типа, удаляем все {{ tag }} из html
       // даже если таких нет в папке components
       console.warn('НЕТУ КОМПОНЕНТА ДЛЯ ТЕГА', curlyTags[i]);
-      html = html.replace(curlyTags[i], '');
+      html = html.replace(new RegExp(curlyTags[i], 'g'), fileHtml);
     }
   }
 
